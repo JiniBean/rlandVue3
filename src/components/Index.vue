@@ -1,3 +1,3 @@
 <template>
-  <div>인덱스</div>
+  <main>인덱스</main>
 </template>
