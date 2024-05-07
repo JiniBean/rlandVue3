@@ -6,3 +6,8 @@ import Layout from "@/components/inc/Layout.vue";
 <template>
   <RouterView/>
 </template>
+<style>
+//.n-list{
+//  background-color: blue;
+//}
+</style>

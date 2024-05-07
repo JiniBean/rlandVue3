@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
 import { createMemoryHistory, createRouter } from 'vue-router'
+
+import './assets/css/icon.css'; // 자바스크립트의 힘으로
 import App from './App.vue';
 import Layout from "./components/inc/Layout.vue";
 import Index from "./components/Index.vue";
@@ -21,7 +23,7 @@ const routes = [
     //     ]}
     // ] },
 
-    { path:'/', component:Layout, children:[
+    { path:'/', component:Layout, redirect:'/index', children:[
         { path: '/index', component: Index },
         { path: '/menu/list', component: List}
 
