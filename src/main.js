@@ -1,7 +1,8 @@
 import { createApp } from 'vue'
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createMemoryHistory, createRouter, createWebHistory } from 'vue-router'
 
 import './assets/css/icon.css'; // 자바스크립트의 힘으로
+
 import App from './App.vue';
 import Layout from "./components/inc/Layout.vue";
 import Index from "./components/Index.vue";
@@ -38,7 +39,8 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createMemoryHistory(),
+    // history: createMemoryHistory(),
+    history: createWebHistory(),
     routes,
 })
 createApp(App)

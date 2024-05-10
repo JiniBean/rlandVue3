@@ -11,8 +11,8 @@ import Footer from "./Footer.vue";
 </template>
 
 <!--data-v 식별자 부여해서 해당 html에서만 사용함 n-list[data-]-->
-<style scoped>
-//.n-list{
-//  background-color: darksalmon;
-//}
-</style>
+<!--<style scoped>-->
+<!--.n-list{-->
+<!--  background-color: darksalmon;-->
+<!--}-->
+<!--</style>-->

@@ -6,8 +6,10 @@ import Layout from "@/components/inc/Layout.vue";
 <template>
   <RouterView/>
 </template>
-<style>
-//.n-list{
-//  background-color: blue;
-//}
-</style>
+<!--<style>-->
+<!--&lt;!&ndash;.n-list{&ndash;&gt;-->
+<!--&lt;!&ndash;  background-color: blue;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+
+<!--</style>-->
