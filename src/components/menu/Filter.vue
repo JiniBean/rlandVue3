@@ -1,7 +1,8 @@
 <script setup>
 import {reactive, ref, onMounted} from "vue";
 const model = reactive({
-  list:[]
+  list:[],
+  query:''
 })
 
 // --- Life Cycle Handler ----------------------------
@@ -26,7 +27,7 @@ onMounted(()=>{
         <li><a class="sm:deco md:deco sm:icon-filter_list"
                href="list">전체메뉴</a></li>
         <li v-for="c of model.list">
-          <a class="d:none md:d:inline current"
+          <a @click.prevent="$emit('categoryChanged',c.id)" class="d:none md:d:inline current"
              :href="'?c='+ c.id" v-text="c.name"></a></li>
       </ul>
     </nav>
@@ -35,8 +36,8 @@ onMounted(()=>{
       <form action="list" method="get">
         <fieldset>
           <legend class="d:none">이름 검색</legend>
-          <input class="query-input" type="text" placeholder="메뉴 검색" name="q" value="">
-          <button class="icon icon-find">검색</button>
+          <input class="query-input" type="text" placeholder="메뉴 검색" name="q" value="" v-model="model.query">
+          <button class="icon icon-find" @click.prevent="$emit('queryClick',model.query)">검색</button>
         </fieldset>
       </form>
     </section>

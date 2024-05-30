@@ -67,7 +67,13 @@ function addCartClickHandler(menu) {
 
 }
 
+function search(value){
+  console.log("test",value);
+}
 
+function searchCategory() {
+
+}
 /*--------Life Cycle Handler-----------------------------*/
 onMounted(() => {
   fetch("http://localhost:8080/menus")
@@ -103,7 +109,7 @@ onMounted(() => {
       <h1 class="d:none">메뉴 검색 목록</h1>
       <div>
         <!-- --------- Filter --------------------------------------------- -->
-        <Filter/>
+        <Filter @queryClick="search" @categoryChanged="search"/>
 
         <section class="menu-card-list" id="menu-card-list">
           <h1 class="d:none">메뉴 목록</h1>
